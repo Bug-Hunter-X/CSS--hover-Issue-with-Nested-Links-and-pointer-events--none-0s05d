@@ -1,0 +1,17 @@
+To resolve this issue, you can add `pointer-events: auto;` to the nested `<a>` element.  This overrides the parent element's `pointer-events: none;` setting for the link specifically, allowing the `:hover` pseudo-class to function correctly.
+
+```css
+.container {
+  pointer-events: none;
+}
+
+.container a {
+  pointer-events: auto; /* Solution */
+}
+
+.container a:hover {
+  text-decoration: underline;
+}
+```
+
+This ensures that hover events are correctly recognized for the link despite its parent element blocking pointer events.
