@@ -1,0 +1,11 @@
+The following CSS code snippet exhibits unexpected behavior in certain browsers.  The `:hover` pseudo-class applied to the `<a>` tag does not work as expected when the link is nested within a container with `pointer-events: none;`.
+
+```css
+.container {
+  pointer-events: none;
+}
+
+.container a:hover {
+  text-decoration: underline;
+}
+```
